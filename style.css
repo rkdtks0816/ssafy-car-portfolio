@@ -1,0 +1,49 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.target-container {
+  height: 35vh;
+
+}
+.about-area {
+  background-image: url(./img/about.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.skill-area {
+  background-image: url(./img/skill.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.project-area {
+  background-image: url(./img/project.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.contact-area {
+  background-image: url(./img/contact.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.load-container-col {
+  height: 35vh;
+}
+.load-container-row {
+  height: 30vh;
+}
+.car {
+  background-image: url(./img/carLeft.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 20vh;
+  height: 20vh;
+  left: 50%;
+  top: 55%;
+}
