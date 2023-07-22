@@ -3,8 +3,17 @@
   box-sizing: border-box;
 }
 
+.total-container {
+  height: 100vh;
+}
+
+.map-container {
+  height: 85vh;
+}
+
 .target-container {
-  height: 35vh;
+  height: 31vh;
+  width: 33%;
 
 }
 .about-area {
@@ -31,19 +40,70 @@
   background-position: center center;
   background-size: contain;
 }
-.load-container-col {
-  height: 35vh;
-}
-.load-container-row {
-  height: 30vh;
-}
 .car {
   background-image: url(./img/carLeft.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  width: 20vh;
-  height: 20vh;
+  height: 10vh;
+  width: 20%;
   left: 50%;
-  top: 55%;
+  top: 50%;
+}
+
+.control-box {
+  height: 123px;
+  width: 123px;
+  left: 50%;
+  top: 80%;
+}
+
+.arrow-up-controller {
+  background-image: url(./img/arrowUp.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 41px;
+  width: 41px;
+  border-radius: 5px;
+}
+.arrow-left-controller {
+  background-image: url(./img/arrowLeft.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 41px;
+  width: 41px;
+  border-radius: 5px;
+}
+.arrow-right-controller {
+  background-image: url(./img/arrowRight.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 41px;
+  width: 41px;
+  border-radius: 5px;
+}
+.arrow-down-controller {
+  background-image: url(./img/arrowDown.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 41px;
+  width: 41px;
+  border-radius: 5px;
+}
+.arrow-up-controller:hover,
+.arrow-left-controller:hover,
+.arrow-right-controller:hover,
+.arrow-down-controller:hover {
+  background-color: #CBCBCB;
+  cursor: pointer;
+}
+
+@media (min-width: 1300px) {
+  .control-box{
+    display: none;
+  }
 }

@@ -19,95 +19,90 @@
     <title>Song Kangsan Portfolio</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          Song KangSan
-          <button
-            class="navbar-toggler border border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item ms-3">about</li>
-              <li class="nav-item ms-3">skill</li>
-              <li class="nav-item ms-3">project</li>
-              <li class="nav-item ms-3">contact</li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section class="position-relative" style="min-height: 100vh;">
-        <div class="row">
-          <div class="col target-container about-area border border-top-0 border-start-0 border-5">
-              <button type="button" class="d-none about-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                ABOUT
-              </button>
-          </div>
-          <div class="col load-container-col">
-  
-          </div>
-          <div class="col target-container skill-area border border-top-0 border-end-0 border-5">
-            <button type="button" class="d-none skill-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              SKILL
+    <div class="total-container d-flex flex-column justify-content-between">
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            Song KangSan
+            <button
+              class="navbar-toggler border border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item ms-3">about</li>
+                <li class="nav-item ms-3">skill</li>
+                <li class="nav-item ms-3">project</li>
+                <li class="nav-item ms-3">contact</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col load-container-row">
-  
+        </nav>
+      </header>
+      <main>
+        <section class="position-relative">
+          <div class="map-container d-flex flex-column">
+            <div class="d-flex justify-content-between mb-auto">
+              <div
+                class="target-container about-area border border-top-0 border-start-0 border-5"
+              ></div>
+              <div
+                class="target-container skill-area border border-top-0 border-end-0 border-5"
+              ></div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div
+                class="target-container project-area border border-bottom-0 border-start-0 border-5"
+              ></div>
+              <div
+                class="target-container contact-area border border-bottom-0 border-end-0 border-5"
+              ></div>
+            </div>
           </div>
-          <div class="col load-container-row align-items-center">
-          </div>
-          <div class="col load-container-row">
-            
-          </div>
-        </div>
-        <div class="row">
-          <div class="col target-container project-area border border-bottom-0 border-start-0 border-5">
-            <button type="button" class="d-none project-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              PROJECT
-            </button>
-          </div>
-          <div class="col load-container-col">
-  
-          </div>
-          <div class="col target-container contact-area border border-bottom-0 border-end-0 border-5">
-            <button type="button" class="d-none contact-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              CONTACT
-            </button>
-          </div>
-        </div>
-        
-        <div class="car position-absolute translate-middle"></div>
 
-      </section>
-    </main>
-    <footer class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="ms-auto">
-        &copy; 2023 송강산 All right reserved
-      </div>
-    </footer>
+          <div class="car position-absolute translate-middle"></div>
+          <div class="control-box position-absolute translate-middle ">
+            <div class="arrow-up-controller mx-auto"></div>
+            <div class="d-flex justify-content-between">
+              <div class="arrow-left-controller"></div>
+              <div class="arrow-right-controller"></div>
+            </div>
+            <div class="arrow-down-controller mx-auto"></div>
+          </div>
 
-    <div class="modal fade info-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        </section>
+      </main>
+      <footer class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="ms-auto">&copy; 2023 송강산 All right reserved</div>
+      </footer>
+    </div>
+
+    <div
+      class="modal fade info-modal"
+      id="infoModal"
+      tabindex="-1"
+      aria-labelledby="infoModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h1 class="modal-title fs-5" id="infoModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-          <div class="modal-body">
-            ...
-          </div>
+          <div class="modal-body">...</div>
         </div>
       </div>
     </div>
