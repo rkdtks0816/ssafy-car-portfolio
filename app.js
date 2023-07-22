@@ -73,7 +73,7 @@ const checkCarPosition = function () {
   }
 };
 
-arrowUpController.addEventListener("click", function (e) {
+arrowUpController.addEventListener("touchstart", function (e) {
   car.style.backgroundImage = `url(${carBaseImgUrl}Top.png)`;
   if (carPosition.top >= 12) {
     carPosition.top--;
