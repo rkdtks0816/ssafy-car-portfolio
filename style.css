@@ -40,6 +40,15 @@
   background-position: center center;
   background-size: contain;
 }
+
+.about-area:hover,
+.skill-area:hover,
+.project-area:hover,
+.contact-area:hover {
+  background-color: #CBCBCB;
+  cursor: pointer;
+}
+
 .car {
   background-image: url(./img/carLeft.png);
   background-repeat: no-repeat;
