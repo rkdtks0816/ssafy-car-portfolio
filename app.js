@@ -25,8 +25,8 @@ let modalTatleText = "";
 let modalBodyHTML = "";
 
 const checkCarPosition = function () {
-;  if (carPosition.top < 35 && carPosition.left < 33) {
-    aboutArea.style.backgroundColor = "#CBCBCB"
+  if (carPosition.top < 35 && carPosition.left < 33) {
+    aboutArea.style.backgroundColor = "#CBCBCB";
     modalTatleText = "ABOUT";
     modalBodyHTML = `
       <h1> 송강산 </h1>
@@ -68,7 +68,7 @@ const checkCarPosition = function () {
     modalBody.innerHTML = modalBodyHTML;
     bootstrapModal.show();
   } else {
-    aboutArea.style.backgroundColor = "#FFF"
+    aboutArea.style.backgroundColor = "#FFF";
     bootstrapModal.hide();
   }
 };
@@ -83,7 +83,7 @@ arrowUpController.addEventListener("touchstart", function (e) {
 
   checkCarPosition();
 });
-arrowLeftController.addEventListener("click", function (e) {
+arrowLeftController.addEventListener("touchstart", function (e) {
   car.style.backgroundImage = `url(${carBaseImgUrl}Left.png)`;
   if (carPosition.left >= 7) {
     carPosition.left -= 2;
@@ -93,7 +93,7 @@ arrowLeftController.addEventListener("click", function (e) {
 
   checkCarPosition();
 });
-arrowRightController.addEventListener("click", function (e) {
+arrowRightController.addEventListener("touchstart", function (e) {
   car.style.backgroundImage = `url(${carBaseImgUrl}Right.png)`;
   if (carPosition.left <= 93) {
     carPosition.left += 2;
@@ -103,7 +103,7 @@ arrowRightController.addEventListener("click", function (e) {
 
   checkCarPosition();
 });
-arrowDownController.addEventListener("click", function (e) {
+arrowDownController.addEventListener("touchstart", function (e) {
   car.style.backgroundImage = `url(${carBaseImgUrl}Bottom.png)`;
   if (carPosition.top <= 88) {
     carPosition.top++;
@@ -116,25 +116,13 @@ arrowDownController.addEventListener("click", function (e) {
 
 document.addEventListener("keydown", function (e) {
   if (e.code === "ArrowUp") {
-    car.style.backgroundImage = `url(${carBaseImgUrl}Top.png)`;
-    if (carPosition.top >= 12) {
-      carPosition.top--;
-    }
+    arrowUpController.touchstart();
   } else if (e.code === "ArrowLeft") {
-    car.style.backgroundImage = `url(${carBaseImgUrl}Left.png)`;
-    if (carPosition.left >= 7) {
-      carPosition.left -= 2;
-    }
+    arrowLeftController.touchstart();
   } else if (e.code === "ArrowRight") {
-    car.style.backgroundImage = `url(${carBaseImgUrl}Right.png)`;
-    if (carPosition.left <= 93) {
-      carPosition.left += 2;
-    }
+    arrowRightController.touchstart();
   } else if (e.code === "ArrowDown") {
-    car.style.backgroundImage = `url(${carBaseImgUrl}Bottom.png)`;
-    if (carPosition.top <= 88) {
-      carPosition.top++;
-    }
+    arrowDownController.touchstart();
   }
   car.style.top = String(carPosition.top) + "%";
   car.style.left = String(carPosition.left) + "%";
